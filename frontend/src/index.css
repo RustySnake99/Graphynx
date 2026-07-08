@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Segoe UI, sans-serif;
+  background: linear-gradient(135deg,
+      #0f172a,
+      #1e293b,
+      #111827);
+  min-height: 100vh;
+  color: white;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.container {
+  width: min(1100px, 95vw);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  font-size: 2.5rem;
+
+  background: linear-gradient(90deg,
+      #60a5fa,
+      #a78bfa,
+      #22d3ee);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plot-container {
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: white;
+
+  padding: 10px;
+
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+a, a:visited {
+  color: white;
+}
+a:hover {
+  color: yellowgreen;
+}
+
+input {
+  flex: 1;
+
+  padding: 16px 20px;
+  margin-top: 5px;
+
+  font-size: 1.1rem;
+
+  border: none;
+  outline: none;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  transition: 0.25s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 0 3px rgba(96, 165, 250, 0.4);
+}
+
+button {
+  padding: 16px 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: linear-gradient(135deg,
+      #3b82f6,
+      #8b5cf6);
+
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(59, 130, 246, 0.35);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
